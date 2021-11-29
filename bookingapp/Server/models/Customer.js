@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const validatore = require("validator");
+const validator = require("validator");
 const customerSchema = new mongoose.Schema({
   firstName: {
     type: String,
@@ -17,7 +17,7 @@ const customerSchema = new mongoose.Schema({
     trim:true,
     lowercase:true,
     validate(value){
-        if(!validatore.isEmail(value)){
+        if(!validator.isEmail(value)){
             throw Error ("Please Provide a valid Email Address")
         }
     }

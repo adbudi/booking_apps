@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema(
       lowercase: true,
       validate(value) {
         if (!validator.isEmail(value)) {
-          throw Error("Please Provide a valid Email address!");
+          throw Error("Please PRovide a valid Email addddress!");
         }
       },
     },
@@ -53,6 +53,7 @@ const userSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+//generate token
 userSchema.methode.generateAuthToken = async function () {
   const user = this;
   const token = jwt.sign({ _id: user._id.toString() }, "Niomic", {

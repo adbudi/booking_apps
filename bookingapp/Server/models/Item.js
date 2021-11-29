@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Schema;
+
 const itemSchema = new mongoose.Schema({
+  
   itemName: {
     type: String,
     required: [true, "Please Input Item Name"],
@@ -19,7 +21,7 @@ const itemSchema = new mongoose.Schema({
   },
   location: {
     type: String,
-    required: [true, "Please Input Location"],
+    required: [true, "Please Input Location!"],
   },
   isPopular: {
     type: Boolean,
@@ -29,7 +31,7 @@ const itemSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please Input description"],
   },
-  category: {
+  Category: {
     type: ObjectId,
     ref: "Category",
   },

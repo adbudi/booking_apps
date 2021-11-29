@@ -5,7 +5,7 @@ const router = express.Router();
  
 
 router.post("/create", uploadSingle, infoController.addInfo);
-// router.get("/read", featureController.viewFeature);
-// router.patch("/update/:id",uploadSingle, featureController.updateFeature);
+router.get("/read", infoController.viewInfo);
+router.patch("/update/:id",uploadSingle, infoController.updateInfo);
 // router.delete("/delete/:id",featureController.deleteFeature);
 module.exports = router;

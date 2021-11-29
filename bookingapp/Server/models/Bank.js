@@ -4,7 +4,7 @@ const bankSchema = new mongoose.Schema({
   bankName: {
     type: String,
     trim: true,
-    require: [true, "Please Input Bank Name"]
+    require: [true, "Please Input Bank Name!"]
   },
 
   accountNumber: {
